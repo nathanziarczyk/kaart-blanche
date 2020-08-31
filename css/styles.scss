@@ -1,0 +1,85 @@
+@import "variables.scss";
+
+body {
+  background-color: $body;
+  font-size: 16px;
+}
+
+p {
+  line-height: 30px;
+}
+
+.hor-ver-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 89%;
+  margin: 0 auto;
+}
+
+// HEADER
+header {
+  height: 50px;
+  background-color: $pink-light;
+  margin-bottom: 13rem;
+
+  img {
+    width: 255px;
+    margin-left: -1rem;
+  }
+}
+
+main {
+  .intro {
+    &__content {
+      width: 30%;
+      h1 {
+        font-size: 75px;
+        margin-bottom: 2rem;
+        span {
+          font-weight: 600;
+          &:last-of-type {
+            font-weight: 400;
+          }
+        }
+      }
+      p {
+        margin-right: 20px;
+        margin-bottom: 4rem;
+      }
+    }
+    &__card {
+      border: 1px dashed $pink-bright;
+      width: 500px;
+      height: 150px;
+      position: relative;
+      div {
+        width: 80%;
+        h2 {
+          font-size: 30px;
+          margin-bottom: 0.8rem;
+          span {
+            font-weight: 600;
+          }
+        }
+        p {
+          margin: 0;
+        }
+      }
+      &::after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: $pink-light;
+        left: 10px;
+        top: 10px;
+        z-index: -1;
+      }
+    }
+  }
+}
