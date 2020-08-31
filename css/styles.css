@@ -8,6 +8,11 @@ p {
   line-height: 30px;
 }
 
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .hor-ver-center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,6 +32,24 @@ p {
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+.highlight {
+  font-weight: 600 !important;
+  position: relative;
+  z-index: 2;
+  display: inline;
+}
+
+.highlight::after {
+  content: "";
+  background-color: #ffccd0;
+  z-index: -1;
+  width: 108%;
+  height: 40%;
+  bottom: 0;
+  left: -10px;
+  position: absolute;
 }
 
 header {
@@ -63,22 +86,6 @@ main .intro__content h1 {
   margin-bottom: 2rem;
 }
 
-main .intro__content h1 .highlight {
-  font-weight: 600 !important;
-  position: relative;
-}
-
-main .intro__content h1 .highlight::after {
-  content: "";
-  background-color: #ffccd0;
-  z-index: -1;
-  width: 110%;
-  height: 40%;
-  bottom: 0;
-  left: -10px;
-  position: absolute;
-}
-
 main .intro__content h1 span {
   font-weight: 600;
 }
@@ -106,6 +113,7 @@ main .intro__card div {
 main .intro__card div h2 {
   font-size: 30px;
   margin-bottom: 0.8rem;
+  font-weight: 400;
 }
 
 main .intro__card div h2 span {
@@ -125,5 +133,37 @@ main .intro__card::after {
   left: 10px;
   top: 10px;
   z-index: -1;
+}
+
+main .categories {
+  height: 562px;
+  background-color: #fff5f6;
+  margin-top: -10rem;
+  padding-top: 12rem;
+}
+
+main .categories__content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .categories__content ul li {
+  padding: 2rem;
+  text-align: center;
+}
+
+main .categories__content ul li img {
+  width: 140px;
+  position: relative;
+}
+
+main .categories__content ul li p {
+  text-transform: uppercase;
+  color: #ff9aa2;
 }
 /*# sourceMappingURL=styles.css.map */

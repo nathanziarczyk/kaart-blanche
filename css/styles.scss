@@ -9,6 +9,11 @@ p {
   line-height: 30px;
 }
 
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .hor-ver-center {
   display: flex;
   flex-direction: column;
@@ -19,6 +24,23 @@ p {
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+.highlight {
+  font-weight: 600 !important;
+  position: relative;
+  z-index: 2;
+  display: inline;
+  &::after {
+    content: "";
+    background-color: $pink;
+    z-index: -1;
+    width: 108%;
+    height: 40%;
+    bottom: 0;
+    left: -10px;
+    position: absolute;
+  }
 }
 
 // HEADER
@@ -47,20 +69,6 @@ main {
       h1 {
         font-size: 75px;
         margin-bottom: 2rem;
-        .highlight {
-          font-weight: 600 !important;
-          position: relative;
-          &::after {
-            content: "";
-            background-color: $pink;
-            z-index: -1;
-            width: 110%;
-            height: 40%;
-            bottom: 0;
-            left: -10px;
-            position: absolute;
-          }
-        }
         span {
           font-weight: 600;
           &:last-of-type {
@@ -83,6 +91,7 @@ main {
         h2 {
           font-size: 30px;
           margin-bottom: 0.8rem;
+          font-weight: 400;
           span {
             font-weight: 600;
           }
@@ -100,6 +109,33 @@ main {
         left: 10px;
         top: 10px;
         z-index: -1;
+      }
+    }
+  }
+  .categories {
+    height: 562px;
+    background-color: $pink-light;
+    margin-top: -10rem;
+    padding-top: 12rem;
+    &__content {
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 2rem;
+        display: flex;
+        li {
+          padding: 2rem;
+          text-align: center;
+          img {
+            width: 140px;
+            position: relative;
+          }
+          p {
+            text-transform: uppercase;
+            color: $pink-bright;
+          }
+        }
       }
     }
   }
