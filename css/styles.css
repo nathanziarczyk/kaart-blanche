@@ -1,4 +1,5 @@
 /* COLOR VARIABLES */
+/* BREAKPOINTS */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap");
@@ -43,6 +44,12 @@ h2 {
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1350px) {
+  .container {
+    width: 85%;
+  }
 }
 
 .highlight {
@@ -91,10 +98,11 @@ main .intro {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 main .intro .toilet-kaart {
-  width: 585px;
+  width: 40vw;
   margin-top: -5rem;
 }
 
@@ -118,6 +126,12 @@ main .intro__content h1 span:last-of-type {
 main .intro__content p {
   margin-right: 20px;
   margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 1350px) {
+  main .intro__content p {
+    margin-bottom: 2rem;
+  }
 }
 
 main .intro__card {
@@ -162,6 +176,13 @@ main .categories {
   margin-top: -10rem;
   padding-top: 12rem;
   margin-bottom: 8rem;
+}
+
+@media screen and (max-width: 1350px) {
+  main .categories {
+    margin-top: 0;
+    padding-top: 0;
+  }
 }
 
 main .categories__content ul {
