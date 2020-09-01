@@ -90,7 +90,8 @@ header {
 
 header img {
   max-width: 255px;
-  margin-left: -1rem;
+  -webkit-transform: translateX(-1rem);
+          transform: translateX(-1rem);
 }
 
 @media screen and (max-width: 1080px) {
@@ -101,6 +102,12 @@ header img {
 
 main {
   margin-bottom: 10rem;
+}
+
+@media screen and (max-width: 1080px) {
+  main {
+    margin-bottom: 4rem;
+  }
 }
 
 main .intro {
@@ -217,6 +224,7 @@ main .categories {
     margin-top: 4rem;
     padding: 2rem 0;
     height: 100%;
+    margin-bottom: 4rem;
   }
 }
 
@@ -424,6 +432,13 @@ footer {
   position: relative;
 }
 
+@media screen and (max-width: 1080px) {
+  footer {
+    height: 100%;
+    margin-bottom: 0;
+  }
+}
+
 footer .footer__content {
   width: 30%;
   height: 100%;
@@ -459,7 +474,7 @@ footer .footer__content p {
 @media screen and (max-width: 700px) {
   footer .footer__content {
     width: 100%;
-    padding: 0 3.5%;
+    padding: 3rem 3.5%;
     margin: 0;
   }
 }
@@ -489,6 +504,7 @@ footer .contact {
     -webkit-box-shadow: unset;
             box-shadow: unset;
     width: 100%;
+    padding-bottom: 2rem;
   }
 }
 
@@ -537,6 +553,11 @@ footer .contact form input[type="submit"] {
   cursor: pointer;
 }
 
+footer .c {
+  padding-top: 3rem;
+  background-color: #fff;
+}
+
 footer .c p,
 footer .c a {
   color: #5c5c5c;
@@ -552,6 +573,7 @@ footer .c a {
   footer .c {
     text-align: center;
     font-size: 0.8rem;
+    padding-top: 0;
   }
 }
 
